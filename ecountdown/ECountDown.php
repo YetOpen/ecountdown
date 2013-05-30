@@ -49,7 +49,7 @@ class ECountDown extends CWidget
         $id = $this->getUniqueId();
         echo '
         <div id="' . $id . '_box" style="color: green; font-weight: bold;">
-            <input type="hidden" rel="' . $id . '" class="countdown" value="' . ($this->seconds) . '"><span id="' . $id . '"></span> h.
+            <input type="hidden" rel="' . $id . '" class="countdown" value="' . ($this->seconds) . '"><span id="' . $id . '"></span>
         </div>';
     }
 
