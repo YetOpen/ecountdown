@@ -5,6 +5,8 @@ class ECountDown extends CWidget
     private static $unique;
     public $seconds = 10;
     public $follow = null;
+    public $up = FALSE;
+    public $style = NULL;
 
     private function getUniqueId()
     {
@@ -21,7 +23,7 @@ class ECountDown extends CWidget
                 ->registerCoreScript('jquery')
                 ->registerScript('countDown', 'function countDown() {
             $(".countdown").each(function(){
-                var valore = $(this).val()-1;
+                var valore = $(this).val()'.($this->up?'*1+':'-').'1;
                 $(this).val(valore);
 
                 secondi = valore;
@@ -47,8 +49,8 @@ class ECountDown extends CWidget
     {
         $id = $this->getUniqueId();
         echo '
-        <div id="' . $id . '_box" style="color: green; font-weight: bold;">
-            <input type="hidden" rel="' . $id . '" class="countdown" value="' . ($this->seconds) . '"><span id="' . $id . '"></span> h.
+        <div id="' . $id . '_box" '.($this->style != NULL ? 'style="'.$this->style.'">' : '').'
+            <input type="hidden" rel="' . $id . '" class="countdown" value="' . ($this->seconds) . '"><span id="' . $id . '"></span>
         </div>';
     }
 
