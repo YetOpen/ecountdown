@@ -6,6 +6,7 @@ class ECountDown extends CWidget
     public $seconds = 10;
     public $follow = null;
     public $up = FALSE;
+    public $style = NULL;
 
     private function getUniqueId()
     {
@@ -48,7 +49,7 @@ class ECountDown extends CWidget
     {
         $id = $this->getUniqueId();
         echo '
-        <div id="' . $id . '_box" style="color: green; font-weight: bold;">
+        <div id="' . $id . '_box" '.($this->style != NULL ? 'style="'.$this->style.'">' : '').'
             <input type="hidden" rel="' . $id . '" class="countdown" value="' . ($this->seconds) . '"><span id="' . $id . '"></span>
         </div>';
     }
