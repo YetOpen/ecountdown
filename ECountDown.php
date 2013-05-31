@@ -22,11 +22,17 @@ class ECountDown extends CWidget
         Yii::app()->getClientScript()
                 ->registerCoreScript('jquery')
                 ->registerScript('countDown', 'function countDown() {
-            $(".countdown").each(function(){
-                var valore = $(this).val()'.($this->up?'*1+':'-').'1;
-                $(this).val(valore);
+            $(".countdown").each(function() {
+                var valore = parseInt($(this).attr(\'value\')) '. ($this->up?'+':'-') .' 1;
 
-                secondi = valore;
+                if(typeof(valore_iniziale) == \'undefined\') {
+                    valore_iniziale = valore;
+                    console.log(\'valore iniziale: \' + valore);
+                }
+
+                $(this).attr(\'value\',valore);
+
+                secondi = valore'. ($this->up?'-'.$this->seconds:'') .';
                 _secondi = secondi % 60;
                 _minuti = ((secondi - _secondi) / 60) % 60;
                 _ore = (secondi - _secondi - _minuti * 60) / 3600;
@@ -37,8 +43,9 @@ class ECountDown extends CWidget
 
                 $("#"+$(this).attr("rel")).html(_ore+":"+_minuti+":"+_secondi);
                 
-                if(valore<=-1)
+		if((valore-'.$this->seconds.' >= valore_iniziale-1) || (' . ($this->up ? 'valore-'.$this->seconds.' == 0' : 'valore <= 0') . ')) {
                     document.location.href = "' . $this->follow . '";
+                }
             });
             setTimeout("countDown();", 1000);
         }', CClientScript::POS_END)
