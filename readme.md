@@ -36,4 +36,18 @@ Also, if you want you can say that this count is up and not down.
 ## Thanks to ..
 
 Now a user that contributed to this project:
-@maxxer
+
+ - @maxxer
+
+## Change Log
+
+### v0.1 (March 15th, 2012)
+
+ - created extension
+
+### v1.0 (??, 2013) (only on github)
+ 
+- #2: improved documentation
+- #3: wrong folder structure
+- #1: count-up
+- #4: count up will never stop
