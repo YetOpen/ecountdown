@@ -46,8 +46,14 @@ Now a user that contributed to this project:
  - created extension
 
 ### v1.0 (??, 2013) (only on github)
- 
+
+#### Enhancement
+
 - #2: improved documentation
-- #3: wrong folder structure
 - #1: count-up
+
+#### BugFix
+ 
+- #3: wrong folder structure
+- ##: removed console.log
 - #4: count up will never stop
