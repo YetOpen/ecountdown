@@ -27,7 +27,6 @@ class ECountDown extends CWidget
 
                 if(typeof(valore_iniziale) == \'undefined\') {
                     valore_iniziale = valore;
-                    console.log(\'valore iniziale: \' + valore);
                 }
 
                 $(this).attr(\'value\',valore);
