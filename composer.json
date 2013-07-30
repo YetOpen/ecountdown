@@ -1,0 +1,15 @@
+{
+    "name": "sensorario/ecountdown",
+    "description": "countdown",
+    "require": {
+        "squizlabs/php_codesniffer": "1.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sensorario",
+            "email": "sensorario@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
